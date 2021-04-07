@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'PROJECT-ID'
-        CLUSTER_NAME = 'CLUSTER-NAME'
-        LOCATION = 'CLUSTER-LOCATION'
-        CREDENTIALS_ID = 'gke'
+        PROJECT_ID = 'dynamic-pivot-28291'
+        CLUSTER_NAME = 'k8s'
+        LOCATION = 'us-central1'
+        CREDENTIALS_ID = 'k8s'
     }
     stages {
         stage("Checkout code") {
