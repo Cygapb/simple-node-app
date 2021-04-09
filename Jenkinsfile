@@ -7,11 +7,6 @@ pipeline {
         CREDENTIALS_ID = 'k8s'
     }
     stages {
-        stage("Checkout code") {
-            steps {
-                checkout scm
-            }
-        }
         stage("Build image") {
             steps {
                 script {
