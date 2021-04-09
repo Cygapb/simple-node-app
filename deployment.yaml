@@ -13,11 +13,10 @@ spec:
   spec:
     containers:
     - name: hello
-     image: cygarpb/train-schedule-simple:latest
+      image: cygarpb/train-schedule-simple:latest
       imagePullPolicy: Always
       ports:
       - containerPort: 5000
-      name: hello
 
 ---
 apiVersion: v1
