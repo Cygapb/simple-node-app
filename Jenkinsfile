@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'dynamic-pivot-28291'
+        PROJECT_ID = 'dynamic-pivot-282919'
         CLUSTER_NAME = 'k8s'
         LOCATION = 'us-central1'
         CREDENTIALS_ID = 'k8s'
