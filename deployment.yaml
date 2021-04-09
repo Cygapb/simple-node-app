@@ -5,19 +5,19 @@ metadata:
   labels:
     app: hello
 spec:
+  selector:
+    matchLabels:
+      app: hello
   template:
     metadata:
       labels:
         app: hello
-        tier: hello
-  spec:
-    containers:
-    - name: hello
-      image: cygarpb/train-schedule-simple:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-
+    spec:
+      containers:
+      - name: hello
+        image: cygarpb/train-schedule-simple:latest
+        ports:
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
