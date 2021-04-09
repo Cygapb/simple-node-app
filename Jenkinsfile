@@ -10,7 +10,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("cygarpb/train-schedule:${env.BUILD_ID}")
+                    myapp = docker.build("cygarpb/train-schedule-simple:${env.BUILD_ID}")
                 }
             }
         }
