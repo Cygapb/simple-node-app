@@ -10,13 +10,13 @@ spec:
       labels:
         app: hello
         tier: hello
-spec:
-  containers:
-  - name: hello
-    image: cygarpb/train-schedule-simple:latest
-    imagePullPolicy: Always
-    ports:
-    - containerPort: 5000
+  spec:
+    containers:
+    - name: hello
+     image: cygarpb/train-schedule-simple:latest
+      imagePullPolicy: Always
+      ports:
+      - containerPort: 5000
       name: hello
 
 ---
