@@ -5,9 +5,17 @@ metadata:
   labels:
     app: hello
 spec:
+strategy:
+  type: Recreate
+template:
+  metadata:
+    labels:
+      app: hello
+      tier: hello
+spec:
   containers:
   - name: hello
-    image: cygarpb/train-schedule/hello:latest
+    image: cygarpb/train-schedule-simple:latest
     imagePullPolicy: Always
     ports:
     - containerPort: 5000
