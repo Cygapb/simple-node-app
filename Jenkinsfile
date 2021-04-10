@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        IMAGE_NAME = 'cygarpb/train-schedule-simple'
         PROJECT_ID = 'dynamic-pivot-282919'
         CLUSTER_NAME = 'k8s'
         LOCATION = 'us-central1'
@@ -10,7 +11,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("cygarpb/train-schedule-simple:${env.BUILD_ID}")
+                    myapp = docker.build("IMAGE_NAME:${env.BUILD_ID}")
                 }
             }
         }
